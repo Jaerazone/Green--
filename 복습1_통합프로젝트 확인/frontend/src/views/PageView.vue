@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page">
         <p>{{memo.memo}}</p>
     </div>
 </template>
