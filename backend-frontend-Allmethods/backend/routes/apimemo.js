@@ -53,7 +53,7 @@ router.post("/writeform/form", function (req, res, next) {
 });
 
 // put을 이용한 데이터값 수정
-router.put ("/:updateform", function(req,res,next) {
+router.put ("/updateform", function(req,res,next) {
   const memo = req.body.data.memo;
   console.log(memo)
 
@@ -61,7 +61,7 @@ router.put ("/:updateform", function(req,res,next) {
   const i = memos.findIndex( (m) => memo.id == m.id );
 
   memos[i] = memo; //memos 배열안에 동일한 id를가진 memo에 값을 덮어씌움=수정
-  res.send(ok); // 덮어씌우기ok~
+  res.send('ok'); // 덮어씌우기ok~
 
 })
 
